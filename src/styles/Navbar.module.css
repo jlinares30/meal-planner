@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+.navbarContainer{
+    @apply flex justify-center items-center;
+}
+.navbar {
+  @apply text-white bg-[var(--green-dark)] text-lg h-15 w-1/2 mt-8 rounded-3xl;
+}
+.navbarList {
+  @apply flex space-x-6 justify-center items-center h-full;
+}
+.navbarListItem {
+  @apply cursor-pointer hover:text-amber-950;
+}
+.avatar{
+    @apply w-10 h-10 rounded-full border-cyan-700 border-1 flex
+}

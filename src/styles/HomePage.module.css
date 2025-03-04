@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+.homePage {
+  @apply p-4 bg-[var(--green-middle)] shadow-md rounded-lg w-full h-screen grid grid-cols-12 grid-rows-6;
+}

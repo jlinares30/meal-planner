@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+.recipeDetail{
+    @apply bg-[var(--green-dark)] overflow-hidden shadow-md rounded-lg w-120 h-60 grid m-10 grid-cols-2 col-span-4 row-span-2;
+}
+.recipeImg{
+    @apply w-full;
+}
+.title{
+    @apply text-xl text-white font-bold mb-3 text-center;
+}
+.ingredientList{
+    @apply flex max-h-43 flex-wrap overflow-y-auto justify-center;
+    scrollbar-width:thin;
+    scrollbar-color: #ccc transparent;
+}
+.ingredientItem{
+    @apply text-sm w-25 flex justify-center bg-[var(--green-light)] rounded-3xl p-0.5 m-1 cursor-pointer;
+}
+.progressBarContainer{
+    @apply place-self-center w-2/3 h-3 mt-2 rounded-full overflow-hidden bg-gray-300
+}
+.progressBar{
+    @apply h-full bg-[var(--green-middle)] animate-pulse transition-all duration-300;
+}

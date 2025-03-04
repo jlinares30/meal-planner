@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+.modalBG{
+    @apply fixed inset-0 bg-gray-800/55 w-full
+}
+.recipeTitle{
+    @apply text-lg font-bold text-white z-10 absolute m-1;
+}
+.recipeDetail {
+  @apply grid grid-cols-2 grid-rows-2 bg-[var(--green-dark)] overflow-hidden m-5 w-150 h-120 rounded-lg shadow-md;
+}
+
+.imgCover{
+    @apply w-full h-full object-cover;
+}
+.title{
+    @apply text-white text-2xl font-bold;
+}
+.stepsSection{
+    @apply p-3;
+}
+
+.ingredientsSection{
+    @apply p-3;
+}
+
+.nutritionalValueSection{
+    @apply p-3;
+}
+
+.nutritionalValueTable{
+    @apply w-full; 
+}
