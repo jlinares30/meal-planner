@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 
 .recipeDetail{
-    @apply bg-[var(--green-dark)] overflow-hidden shadow-md rounded-lg w-110 h-65 grid grid-cols-2 col-span-5 row-span-4;
+    @apply bg-[var(--green-dark)] overflow-hidden shadow-md rounded-lg w-full h-full grid grid-cols-2 col-span-5 row-span-4;
 }
 .recipeImg{
     @apply w-full;
 }
 .title{
-    @apply text-xl text-white font-bold mb-3 text-center;
+    @apply text-3xl text-white font-bold mb-3 text-center;
 }
 .ingredientList{
     @apply flex max-h-43 flex-wrap overflow-y-auto justify-center;

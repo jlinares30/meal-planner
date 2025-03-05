@@ -6,7 +6,7 @@ function IngredientForm() {
   return (
     <form className={style.ingredientForm}>
       <h1 className={style.title}>Available Ingredients</h1>
-      <label for='inputIngredient' className={style.lbTitle}>List of Ingredients</label>
+      <label htmlFor='inputIngredient' className={style.lbTitle}>List of Ingredients</label>
       <input id='inputIngredient' className={style.inputIngredient} placeholder='Example: tomato, avocado' type="text"/>
       <h2 className={style.selectedTitle}>Ingredients Selected</h2>
       <ul className={style.ingredientList}>

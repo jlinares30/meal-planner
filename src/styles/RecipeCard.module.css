@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .recipeCard{
-    @apply w-45 bg-[var(--green-middle)] rounded-lg shadow-2xl overflow-hidden cursor-pointer;
+    @apply w-44 bg-[var(--green-middle)] rounded-lg shadow-2xl overflow-hidden cursor-pointer;
 }
 .infoContainer{
     @apply p-3;

@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .sidebar {
-  @apply bg-emerald-50 w-40 h-65 shadow-md rounded-lg col-span-2 row-span-4;
+  @apply bg-emerald-50 w-full h-full shadow-md rounded-lg col-span-2 row-span-4;
 }
 
 .title{
@@ -13,5 +13,5 @@
 }
 
 .navItem{
-    @apply flex gap-2 text-base border-t-2 p-2 cursor-pointer border-t-gray-300 w-full;
+    @apply flex gap-2 text-base border-t-2 p-4 cursor-pointer border-t-gray-300 w-full;
 }
