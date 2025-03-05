@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
 .ingredientForm {
-  @apply bg-[var(--green-dark)] relative shadow-md rounded-lg overflow-hidden w-150 p-4 m-4 min-h-75 col-span-3 row-span-2;
+  @apply bg-[var(--green-dark)] relative shadow-md rounded-lg overflow-hidden w-110 p-2 h-65 col-span-5 row-span-4;
 }
 .title{
-    @apply text-4xl text-white font-bold mb-3;
+    @apply text-2xl text-white font-bold mb-1;
 }
 .lbTitle{
     @apply text-lg text-white block;
@@ -13,7 +13,9 @@
     @apply text-lg text-white;
 }
 .ingredientList{
-    @apply flex flex-wrap;
+    @apply flex w-full overflow-y-auto overflow-x-hidden;
+    scrollbar-width:thin;
+    scrollbar-color: #ccc transparent;
 }
 .inputIngredient{
     @apply w-1/2 bg-[var(--green-middle)] rounded p-1 m-2;

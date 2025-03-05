@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .recipeDetail{
-    @apply bg-[var(--green-dark)] overflow-hidden shadow-md rounded-lg w-120 h-60 grid m-10 grid-cols-2 col-span-4 row-span-2;
+    @apply bg-[var(--green-dark)] overflow-hidden shadow-md rounded-lg w-110 h-65 grid grid-cols-2 col-span-5 row-span-4;
 }
 .recipeImg{
     @apply w-full;

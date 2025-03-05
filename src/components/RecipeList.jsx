@@ -1,10 +1,22 @@
-
+import style from '../styles/RecipeList.module.css';
+import RecipeCard from './RecipeCard';
 
 function RecipeList() {
   return (
-    <div>
-      <h1>Recipe List</h1>
-    </div>
+    <>
+      <div className={style.recipeList}>
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+      </div>
+    </>
   );
 }
 

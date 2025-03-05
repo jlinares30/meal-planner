@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+.recipeList{
+    @apply col-span-12 row-span-8 h-full gap-5 flex-wrap bg-amber-700 shadow-md w-full rounded-lg flex;
+}

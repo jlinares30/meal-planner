@@ -10,11 +10,73 @@ function IngredientForm() {
       <input id='inputIngredient' className={style.inputIngredient} placeholder='Example: tomato, avocado' type="text"/>
       <h2 className={style.selectedTitle}>Ingredients Selected</h2>
       <ul className={style.ingredientList}>
-        {ingredients.length == 0 ? (  
+        {ingredients.length == 0 ? (
+          <>  
           <li className={style.ingredientSelected}>
             <p>Ingredient 1</p>
             <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
         </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+          <li className={style.ingredientSelected}>
+            <p>Ingredient 1</p>
+            <img className={style.deleteBtn} src="src/assets/x.png" alt="delete button" />
+        </li>
+        </>
         ):
       (<p>No Ingredients Selected </p>)}
       </ul>
