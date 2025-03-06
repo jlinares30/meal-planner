@@ -1,7 +1,10 @@
 @import 'tailwindcss';
 
-.sidebar {
+.sidebarHomePage {
   @apply bg-emerald-50 w-full h-full shadow-md rounded-lg col-span-2 row-span-4;
+}
+.sidebar{
+    @apply bg-emerald-50 w-full h-full shadow-md rounded-lg col-span-2 row-span-5;
 }
 
 .title{

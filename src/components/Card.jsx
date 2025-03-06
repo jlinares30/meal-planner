@@ -1,6 +1,6 @@
-import style from '../styles/RecipeCard.module.css';
+import style from '../styles/Card.module.css';
 
-function RecipeCard({ recipe }) {
+function Card({ recipe }) {
   return (
     <div className={style.recipeCard}>
       <img src='src/assets/profile.jpg' alt='img' />
@@ -12,4 +12,4 @@ function RecipeCard({ recipe }) {
   );
 }
 
-export default RecipeCard;
+export default Card;

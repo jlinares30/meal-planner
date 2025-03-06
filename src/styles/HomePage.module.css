@@ -1,5 +1,5 @@
 @import 'tailwindcss';
 
 .homePage {
-  @apply bg-[var(--green-middle)] gap-5 shadow-md rounded-lg max-w-screen-2xl h-screen grid grid-cols-12 grid-rows-12 justify-self-center mt-6;
+  @apply bg-[var(--green-middle)] gap-5 shadow-md rounded-lg max-w-screen-2xl h-screen grid grid-cols-12 grid-rows-12 justify-self-center m-6;
 }

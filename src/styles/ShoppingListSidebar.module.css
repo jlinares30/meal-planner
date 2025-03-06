@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+.shoppingListSidebar {
+  @apply bg-gray-100 w-full h-full shadow-md rounded-lg col-span-2 row-span-5 col-start-1 row-start-6;
+}

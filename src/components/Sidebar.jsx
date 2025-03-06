@@ -1,8 +1,15 @@
 import style from '../styles/Sidebar.module.css';
+import classNames from 'classnames';
 
-function Sidebar() {
+function Sidebar({ location }) {
+  const sidebarClasses = classNames(
+    style.sidebarHomePage,
+    {
+      [style.sidebar]: location !== "home",
+    }
+  );
   return (
-    <aside className={style.sidebar}>
+    <aside className={sidebarClasses}>
       <h2 className={style.title} >Home</h2>
       <nav className={style.nav}>
         <ul className={style.navList}>

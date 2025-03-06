@@ -4,14 +4,23 @@
     @apply flex justify-center items-center;
 }
 .navbar {
-  @apply text-white bg-[var(--green-dark)] text-lg h-15 w-1/2 mt-8 rounded-3xl;
+  @apply  bg-[var(--green-dark)] text-lg h-15 w-1/2 mt-8 rounded-3xl flex justify-center items-center gap-5;
 }
 .navbarList {
   @apply flex space-x-6 justify-center items-center h-full;
 }
+.searchContainer{
+    @apply flex justify-center items-center;
+}
+.searchInput{
+    @apply h-8 rounded-2xl bg-[var(--green-light)] text-lg pl-4 mr-1;
+}
+.searchIcon{
+    @apply w-8 h-8 cursor-pointer;
+}
 .navbarListItem {
-  @apply cursor-pointer hover:text-amber-950;
+  @apply cursor-pointer hover:text-amber-50;
 }
 .avatar{
-    @apply w-10 h-10 rounded-full border-cyan-700 border-1 flex
+    @apply cursor-pointer w-10 h-10 rounded-full border-cyan-700 border-1 flex hover:border-amber-50;
 }
