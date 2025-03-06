@@ -1,0 +1,113 @@
+[
+    {
+      "id": 1,
+      "name": "Arroz con Pollo",
+      "ingredients": [2, 3, 5],
+      "steps": [
+        "Cocinar el arroz en agua con sal.",
+        "Freír la cebolla y el pollo con especias hasta dorar.",
+        "Mezclar el arroz con el pollo y servir."
+      ],
+      "image": "arroz_con_pollo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ensalada de Tomate y Lechuga",
+      "ingredients": [1, 6],
+      "steps": [
+        "Lavar y cortar el tomate y la lechuga.",
+        "Agregar sal, aceite y vinagre al gusto.",
+        "Servir en un plato."
+      ],
+      "image": "ensalada_tomate_lechuga.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Papas Fritas",
+      "ingredients": [4, 5],
+      "steps": [
+        "Pelar y cortar las papas en tiras.",
+        "Freír en aceite caliente hasta dorar.",
+        "Escurrir y servir con sal."
+      ],
+      "image": "papas_fritas.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Tortilla de Huevo",
+      "ingredients": [5, 7],
+      "steps": [
+        "Picar la cebolla finamente.",
+        "Batir los huevos y mezclar con la cebolla.",
+        "Cocinar en una sartén hasta cuajar."
+      ],
+      "image": "tortilla_huevo.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Filete de Pescado a la Plancha",
+      "ingredients": [8, 5],
+      "steps": [
+        "Marinar el pescado con sal y pimienta.",
+        "Cocinar en una sartén con cebolla hasta dorar.",
+        "Servir con limón."
+      ],
+      "image": "pescado_plancha.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Pasta con Queso",
+      "ingredients": [9, 10],
+      "steps": [
+        "Hervir la pasta en agua con sal.",
+        "Rallar el queso y mezclar con la pasta caliente.",
+        "Servir con un poco de orégano."
+      ],
+      "image": "pasta_queso.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Arroz con Huevo",
+      "ingredients": [3, 7],
+      "steps": [
+        "Cocinar el arroz en agua con sal.",
+        "Freír los huevos en una sartén.",
+        "Servir el arroz con los huevos encima."
+      ],
+      "image": "arroz_huevo.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Sopa de Pollo",
+      "ingredients": [2, 4, 5],
+      "steps": [
+        "Hervir el pollo con agua y cebolla.",
+        "Agregar las papas y cocinar hasta que estén blandas.",
+        "Servir caliente."
+      ],
+      "image": "sopa_pollo.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Ensalada de Pasta",
+      "ingredients": [6, 9, 10],
+      "steps": [
+        "Hervir la pasta y enfriar.",
+        "Cortar la lechuga y rallar el queso.",
+        "Mezclar todo y servir frío."
+      ],
+      "image": "ensalada_pasta.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Pollo al Horno",
+      "ingredients": [2, 5],
+      "steps": [
+        "Marinar el pollo con cebolla y especias.",
+        "Hornear a 180°C por 40 minutos.",
+        "Servir caliente."
+      ],
+      "image": "pollo_horno.jpg"
+    }
+  ]
+  

@@ -1,0 +1,13 @@
+[
+    { "id": 1, "name": "Tomate", "category": "Verdura", "quantity": "5 unidades" },
+    { "id": 2, "name": "Pollo", "category": "Proteína", "quantity": "500g" },
+    { "id": 3, "name": "Arroz", "category": "Cereal", "quantity": "1kg" },
+    { "id": 4, "name": "Papa", "category": "Tubérculo", "quantity": "4 unidades" },
+    { "id": 5, "name": "Cebolla", "category": "Verdura", "quantity": "2 unidades" },
+    { "id": 6, "name": "Lechuga", "category": "Verdura", "quantity": "1 unidad" },
+    { "id": 7, "name": "Huevo", "category": "Proteína", "quantity": "6 unidades" },
+    { "id": 8, "name": "Pescado", "category": "Proteína", "quantity": "400g" },
+    { "id": 9, "name": "Pasta", "category": "Cereal", "quantity": "500g" },
+    { "id": 10, "name": "Queso", "category": "Lácteo", "quantity": "200g" }
+  ]
+  
