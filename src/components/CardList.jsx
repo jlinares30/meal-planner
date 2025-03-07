@@ -2,7 +2,7 @@ import style from '../styles/CardList.module.css';
 import Card from './Card';
 import classNames from 'classnames';
 
-function CardList({location}) {
+function CardList({location, products}) {
   const recipeListClasses = classNames(
     style.recipeListHomePage,
     {
@@ -12,20 +12,10 @@ function CardList({location}) {
   return (
     <>
       <div className={recipeListClasses}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {products.map((product, index) => (
+          <Card key={index} product={product} />
+        ))}
+        {console.log(products)}
 
       </div>
     </>

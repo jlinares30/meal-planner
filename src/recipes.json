@@ -1,113 +1,122 @@
 [
     {
       "id": 1,
-      "name": "Arroz con Pollo",
-      "ingredients": [2, 3, 5],
-      "steps": [
-        "Cocinar el arroz en agua con sal.",
-        "Freír la cebolla y el pollo con especias hasta dorar.",
-        "Mezclar el arroz con el pollo y servir."
-      ],
-      "image": "arroz_con_pollo.jpg"
+      "name": "Omelette de espinaca y queso",
+      "ingredients": ["huevo", "espinaca", "queso", "sal", "pimienta"],
+      "instructions": "Bate los huevos con sal y pimienta. En una sartén caliente, cocina las espinacas por un minuto, agrega los huevos y cocina a fuego lento hasta que cuaje. Añade queso y dobla el omelette."
     },
     {
       "id": 2,
-      "name": "Ensalada de Tomate y Lechuga",
-      "ingredients": [1, 6],
-      "steps": [
-        "Lavar y cortar el tomate y la lechuga.",
-        "Agregar sal, aceite y vinagre al gusto.",
-        "Servir en un plato."
-      ],
-      "image": "ensalada_tomate_lechuga.jpg"
+      "name": "Tortilla de atún",
+      "ingredients": ["huevo", "atún", "sal", "pimienta", "aceite"],
+      "instructions": "Bate los huevos con sal y pimienta. Añade el atún escurrido y mezcla bien. Cocina en una sartén con un poco de aceite hasta que esté dorada por ambos lados."
     },
     {
       "id": 3,
-      "name": "Papas Fritas",
-      "ingredients": [4, 5],
-      "steps": [
-        "Pelar y cortar las papas en tiras.",
-        "Freír en aceite caliente hasta dorar.",
-        "Escurrir y servir con sal."
-      ],
-      "image": "papas_fritas.jpg"
+      "name": "Ensalada de pollo con palta",
+      "ingredients": ["pollo", "palta", "lechuga", "sal", "limón"],
+      "instructions": "Corta el pollo en cubos y cocínalo. Mezcla con palta en trozos, lechuga picada, sal y jugo de limón."
     },
     {
       "id": 4,
-      "name": "Tortilla de Huevo",
-      "ingredients": [5, 7],
-      "steps": [
-        "Picar la cebolla finamente.",
-        "Batir los huevos y mezclar con la cebolla.",
-        "Cocinar en una sartén hasta cuajar."
-      ],
-      "image": "tortilla_huevo.jpg"
+      "name": "Arroz con pollo",
+      "ingredients": ["pollo", "arroz", "pimiento", "cebolla", "ajo", "sal"],
+      "instructions": "Dora el pollo con ajo y cebolla. Agrega arroz, pimiento y agua. Cocina hasta que el arroz esté listo."
     },
     {
       "id": 5,
-      "name": "Filete de Pescado a la Plancha",
-      "ingredients": [8, 5],
-      "steps": [
-        "Marinar el pescado con sal y pimienta.",
-        "Cocinar en una sartén con cebolla hasta dorar.",
-        "Servir con limón."
-      ],
-      "image": "pescado_plancha.jpg"
+      "name": "Tallarines al pesto con pollo",
+      "ingredients": ["pollo", "tallarines", "albahaca", "queso", "aceite de oliva"],
+      "instructions": "Cocina los tallarines. Licúa la albahaca con queso y aceite de oliva. Mezcla con la pasta y añade pollo cocido en trozos."
     },
     {
       "id": 6,
-      "name": "Pasta con Queso",
-      "ingredients": [9, 10],
-      "steps": [
-        "Hervir la pasta en agua con sal.",
-        "Rallar el queso y mezclar con la pasta caliente.",
-        "Servir con un poco de orégano."
-      ],
-      "image": "pasta_queso.jpg"
+      "name": "Sopa de pollo",
+      "ingredients": ["pollo", "zanahoria", "papa", "cebolla", "sal"],
+      "instructions": "Hierve el pollo con cebolla. Agrega zanahoria y papa picadas. Cocina hasta que las verduras estén tiernas."
     },
     {
       "id": 7,
-      "name": "Arroz con Huevo",
-      "ingredients": [3, 7],
-      "steps": [
-        "Cocinar el arroz en agua con sal.",
-        "Freír los huevos en una sartén.",
-        "Servir el arroz con los huevos encima."
-      ],
-      "image": "arroz_huevo.jpg"
+      "name": "Pollo al horno con papas",
+      "ingredients": ["pollo", "papa", "ajo", "sal", "pimienta"],
+      "instructions": "Sazona el pollo con ajo, sal y pimienta. Hornea con papas cortadas en trozos hasta que estén doradas."
     },
     {
       "id": 8,
-      "name": "Sopa de Pollo",
-      "ingredients": [2, 4, 5],
-      "steps": [
-        "Hervir el pollo con agua y cebolla.",
-        "Agregar las papas y cocinar hasta que estén blandas.",
-        "Servir caliente."
-      ],
-      "image": "sopa_pollo.jpg"
+      "name": "Guiso de lentejas con pollo",
+      "ingredients": ["lentejas", "pollo", "zanahoria", "cebolla", "ajo", "sal"],
+      "instructions": "Cocina las lentejas con zanahoria, cebolla y ajo. Agrega el pollo en trozos y deja cocinar hasta que esté tierno."
     },
     {
       "id": 9,
-      "name": "Ensalada de Pasta",
-      "ingredients": [6, 9, 10],
-      "steps": [
-        "Hervir la pasta y enfriar.",
-        "Cortar la lechuga y rallar el queso.",
-        "Mezclar todo y servir frío."
-      ],
-      "image": "ensalada_pasta.jpg"
+      "name": "Ceviche de pollo",
+      "ingredients": ["pollo", "limón", "cebolla", "sal", "ají"],
+      "instructions": "Corta el pollo en trozos pequeños y cocínalo. Mezcla con jugo de limón, cebolla en juliana, sal y ají al gusto."
     },
     {
       "id": 10,
-      "name": "Pollo al Horno",
-      "ingredients": [2, 5],
-      "steps": [
-        "Marinar el pollo con cebolla y especias.",
-        "Hornear a 180°C por 40 minutos.",
-        "Servir caliente."
-      ],
-      "image": "pollo_horno.jpg"
+      "name": "Ensalada de lentejas",
+      "ingredients": ["lentejas", "tomate", "cebolla", "limón", "sal"],
+      "instructions": "Hierve las lentejas y deja enfriar. Mezcla con tomate y cebolla picados. Aliña con jugo de limón y sal."
+    },
+    {
+      "id": 11,
+      "name": "Arroz chaufa de pollo",
+      "ingredients": ["arroz", "pollo", "huevo", "sillao", "cebolla china"],
+      "instructions": "Saltea el pollo en una sartén. Añade arroz cocido, huevo revuelto y sillao. Agrega cebolla china picada."
+    },
+    {
+      "id": 12,
+      "name": "Pollo saltado",
+      "ingredients": ["pollo", "cebolla", "tomate", "ají", "sillao"],
+      "instructions": "Saltea el pollo en tiras con cebolla, tomate y ají. Añade sillao y cocina hasta que las verduras estén tiernas."
+    },
+    {
+      "id": 13,
+      "name": "Revuelto de lentejas con huevo",
+      "ingredients": ["lentejas", "huevo", "cebolla", "ajo", "sal"],
+      "instructions": "Cocina las lentejas con cebolla y ajo. Agrega los huevos batidos y revuelve hasta que cuajen."
+    },
+    {
+      "id": 14,
+      "name": "Puré de papas con pollo",
+      "ingredients": ["papa", "pollo", "leche", "mantequilla", "sal"],
+      "instructions": "Hierve las papas y haz un puré con leche y mantequilla. Acompaña con pollo sancochado o frito."
+    },
+    {
+      "id": 15,
+      "name": "Sándwich de pollo con palta",
+      "ingredients": ["pan", "pollo", "palta", "sal", "limón"],
+      "instructions": "Machaca la palta con sal y limón. Unta en el pan y añade pollo desmenuzado."
+    },
+    {
+      "id": 16,
+      "name": "Pollo guisado con arroz",
+      "ingredients": ["pollo", "arroz", "cebolla", "pimiento", "sal"],
+      "instructions": "Dora el pollo con cebolla y pimiento. Agrega agua y cocina hasta que el pollo esté tierno. Acompaña con arroz."
+    },
+    {
+      "id": 17,
+      "name": "Ensalada de espinaca y queso",
+      "ingredients": ["espinaca", "queso", "tomate", "sal", "limón"],
+      "instructions": "Lava la espinaca y mézclala con queso en cubos y tomate en rodajas. Aliña con limón y sal."
+    },
+    {
+      "id": 18,
+      "name": "Tallarines en salsa de tomate con pollo",
+      "ingredients": ["tallarines", "pollo", "tomate", "cebolla", "ajo"],
+      "instructions": "Cocina los tallarines. Prepara una salsa con tomate, cebolla y ajo. Mezcla con el pollo en trozos y sirve con la pasta."
+    },
+    {
+      "id": 19,
+      "name": "Pollo a la plancha con ensalada",
+      "ingredients": ["pollo", "lechuga", "tomate", "sal", "limón"],
+      "instructions": "Cocina el pollo a la plancha con sal. Acompaña con una ensalada de lechuga y tomate aliñada con limón."
+    },
+    {
+      "id": 20,
+      "name": "Guiso de pollo con papa",
+      "ingredients": ["pollo", "papa", "cebolla", "ajo", "sal"],
+      "instructions": "Dora el pollo con cebolla y ajo. Agrega papas y agua. Cocina hasta que el pollo y las papas estén tiernas."
     }
   ]
-  

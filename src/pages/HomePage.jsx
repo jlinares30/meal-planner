@@ -6,8 +6,10 @@ import IngredientForm from "../components/IngredientForm";
 import RecipeDetailsModal from "../components/RecipeDetailsModal";
 import Sidebar from "../components/Sidebar";
 import style from "../styles/HomePage.module.css";
+import { useMeal } from "../context/MealContext";
 
 function HomePage({ location }) {
+  const { recipes } = useMeal();
   return (
     <>
       <Navbar location={location}/>
@@ -15,7 +17,7 @@ function HomePage({ location }) {
         <Sidebar location={'home'}/>
         <RecipeDetail />
         <IngredientForm />
-        <CardList location={'home'}/>
+        <CardList location={'home'} products={recipes}/>
         {/* <RecipeDetailsModal /> */}
       </main>
     </>

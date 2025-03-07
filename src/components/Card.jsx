@@ -1,12 +1,12 @@
 import style from '../styles/Card.module.css';
 
-function Card({ recipe }) {
+function Card({ product }) {
   return (
     <div className={style.recipeCard}>
       <img src='src/assets/profile.jpg' alt='img' />
       <div className={style.infoContainer}>
-        <h2 className={style.title}>Veg Mixer</h2>
-        <p className={style.description}>Tomato salad and carrot</p>
+        <h2 className={style.title}>{product.name}</h2>
+        <p className={style.description}>{product.category}</p>
       </div>
     </div>
   );
