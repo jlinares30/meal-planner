@@ -81,5 +81,6 @@
 { "id": 79, "name": "Cereal Granola", "category": "Carbohidrato", "quantity": "200g" },
 { "id": 80, "name": "Cereal Cornflakes", "category": "Carbohidrato", "quantity": "200g" },
 { "id": 81, "name": "Tostadas Integrales", "category": "Carbohidrato", "quantity": "200g" },
-{ "id": 82, "name": "Escencia de Vainilla", "category": "Aromatizante", "quantity": "200g" }
+{ "id": 82, "name": "Escencia de Vainilla", "category": "Aromatizante", "quantity": "200g" },
+{ "id": 83, "name": "Piña", "category": "Fruta", "quantity": "200g" }
 ]

@@ -15,7 +15,6 @@ function CardList({location, products}) {
         {products.map((product, index) => (
           <Card key={index} product={product} />
         ))}
-        {console.log(products)}
 
       </div>
     </>
