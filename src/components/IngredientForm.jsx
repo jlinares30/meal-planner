@@ -2,17 +2,18 @@ import { useEffect, useState } from 'react';
 import style from '../styles/IngredientForm.module.css';
 import { useMeal } from '../context/MealContext';
 function IngredientForm() {
-  const { ingredients, addIngredient, removeIngredient,selectedIngredients } = useMeal();
-
+  const {addIngredient, removeIngredient,selectedIngredients } = useMeal();
   const handleOnChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     let newIngredients = e.target.value.split(',')
       .map((item) => item.trim().toLowerCase()); // ['tomato', 'avocado']
+    
+      // filtra los ingredientes seleccionados que han sido borrados del input y los elimina
     const removedIngredients = selectedIngredients.filter((item) => !newIngredients.includes(item));
     if(removedIngredients.length > 0) {
       removedIngredients.forEach((item) => removeIngredient(item));
     }
-    
+    // filtra los nuevos ingredientes agregados al input que no han sido seleccionados y los agrega
     const addedIngredients = newIngredients.filter((item) => !selectedIngredients.includes(item));
     if(addedIngredients.length > 0) {
       addIngredient(addedIngredients);
@@ -43,8 +44,7 @@ function IngredientForm() {
       </ul>
       <button type="button" className={style.Btn} >Search</button>
       <button type="button" className={style.Btn} >Filter</button>
-      <img className={style.mealImg} src="src/assets/profile.jpg" alt="meal image" />
-    </form>
+      <img className={style.mealImg} src='src/assets/pollo a la plancha con ensalada.jpg' alt="meal image" />    </form>
   );
 }
 

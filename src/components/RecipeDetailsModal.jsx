@@ -1,12 +1,15 @@
 import style from '../styles/RecipeDetailsModal.module.css';
+import {useMeal } from '../context/MealContext';
 
 function RecipeDetailsModal(){
+    const {selectedRecipe, openRecipeModal} = useMeal();
+    
     return(
-        <div className={style.modalBG}>
+        <div className={style.modalBG} onClick={openRecipeModal}>
         <div className={style.recipeDetail}>
           <div className={style.headerSection}>
-            <h1 className={style.recipeTitle}>Banana Bread</h1>
-            <img className={style.imgCover} src="src/assets/profile.jpg" alt="img" />
+            <h1 className={style.recipeTitle}>{selectedRecipe.name}</h1>
+            <img className={style.imgCover} src={`src/assets/${selectedRecipe.name}.jpg`} alt="img" />
           </div>
           <div className={style.stepsSection}>
             <h1 className={style.title}>Steps</h1>

@@ -3,10 +3,11 @@ import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import CardList from '../components/CardList';
 import ShoppingListSidebar from '../components/ShoppingListSidebar';
+import RecipeDetailsModal from '../components/RecipeDetailsModal';
 import { useMeal } from '../context/MealContext';
 
 function RecipePage({ location }) {
-    const { recipes } = useMeal()
+    const { recipes, isOpenRecipeModal } = useMeal()
     return (
         <>
       <Navbar location={location}/>
@@ -14,6 +15,7 @@ function RecipePage({ location }) {
         <Sidebar location={'page'}/>
         <ShoppingListSidebar />
         <CardList location={'page'} products={recipes}/>
+        {isOpenRecipeModal && <RecipeDetailsModal />}
       </main>
     </>
     );

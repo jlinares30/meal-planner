@@ -9,16 +9,16 @@ import style from "../styles/HomePage.module.css";
 import { useMeal } from "../context/MealContext";
 
 function HomePage({ location }) {
-  const { recipes } = useMeal();
+  const { recipes, isOpenRecipeModal } = useMeal();
   return (
     <>
       <Navbar location={location}/>
       <main className={style.homePage}>
         <Sidebar location={'home'}/>
-        <RecipeDetail />
+        <RecipeDetail/>
         <IngredientForm />
         <CardList location={'home'} products={recipes}/>
-        {/* <RecipeDetailsModal /> */}
+        {isOpenRecipeModal && <RecipeDetailsModal />}
       </main>
     </>
   );

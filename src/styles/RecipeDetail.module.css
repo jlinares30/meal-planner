@@ -6,6 +6,12 @@
 .recipeImg{
     @apply w-full;
 }
+.recipeTitle{
+    @apply absolute text-xl text-white font-semibold ml-2;
+}
+.recipeDetailContainer{
+    @apply flex flex-col justify-center;
+}
 .title{
     @apply text-3xl text-white font-bold mb-3 text-center;
 }
