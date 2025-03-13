@@ -12,9 +12,10 @@ function Card({ product }) {
 
   return (
     <div className={style.recipeCard} onClick={handleOnClick(product)}>
-      <img src={`src/assets/${product.name}.jpg`} alt={product.name} />
+      <img className={style.imgCard} src={`src/assets/${product.name}.jpg`} alt={product.name} />
+      <img className={style.svgEye} onClick={openRecipeModal} src="src/assets/eye.svg" alt="eye svg" />
       <div className={style.infoContainer}>
-        <h2 className={style.title} onClick={openRecipeModal}>{product.name}</h2>
+        <h2 className={style.title}>{product.name}</h2>
         <p className={style.description}>{product.category}</p>
       </div>
     </div>

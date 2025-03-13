@@ -1,27 +1,31 @@
 @import 'tailwindcss';
 
 .recipeDetail{
-    @apply bg-[var(--green-dark)] overflow-hidden shadow-md rounded-lg w-full h-full grid grid-cols-2 col-span-5 row-span-4;
+    @apply bg-[var(--green-dark)] overflow-hidden shadow-md rounded-lg w-full h-full grid grid-cols-2 grid-rows-1 col-span-5 row-span-4;
 }
 .recipeImg{
-    @apply w-full;
+    @apply w-full object-cover h-74;
 }
 .recipeTitle{
-    @apply absolute text-xl text-white font-semibold ml-2;
+    @apply absolute text-xl text-gray-600 font-semibold ml-2;
 }
 .recipeDetailContainer{
-    @apply flex flex-col justify-center;
+    @apply flex flex-col w-full col-span-2 col-start-2 row-span-1 row-start-1;
+
 }
 .title{
     @apply text-3xl text-white font-bold mb-3 text-center;
 }
 .ingredientList{
-    @apply flex max-h-43 flex-wrap overflow-y-auto justify-center;
+    @apply flex h-47 flex-wrap justify-center my-2 overflow-y-auto;
     scrollbar-width:thin;
     scrollbar-color: #ccc transparent;
 }
 .ingredientItem{
-    @apply text-sm w-25 flex justify-center bg-[var(--green-light)] rounded-3xl p-0.5 m-1 cursor-pointer;
+    @apply text-sm w-38 h-7 flex justify-center items-center bg-[var(--green-light)] rounded-3xl p-0.5 m-1 cursor-pointer;
+}
+.noIngredients{
+    @apply text-center;
 }
 .progressBarContainer{
     @apply place-self-center w-2/3 h-3 mt-2 rounded-full overflow-hidden bg-gray-300
