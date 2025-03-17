@@ -107,7 +107,7 @@
     {
       "id": 16,
       "name": "Seco de pollo",
-      "ingredients": [2, 3, 5, 16],
+      "ingredients": [2, 3, 5, 16, 23],
       "category": "Almuerzo",
       "instructions": "Dora el pollo con cebolla y pimiento. Agrega agua y cocina hasta que el pollo esté tierno. Acompaña con arroz."
     },

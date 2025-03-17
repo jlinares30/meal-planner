@@ -6,6 +6,10 @@ import { use } from 'react';
 function RecipeDetail({ recipe }) {
   const { selectedRecipe, ingredients, selectedIngredients } = useMeal();
   const [ingredientsTransform, setIngredientsTransform] = useState([]);
+  const [percentage, setPercentage] = useState(0);
+
+  console.log(selectedIngredients);
+  console.log(ingredientsTransform);
   useEffect(() => {
     if (selectedRecipe.ingredients && selectedRecipe.ingredients.length > 0) {
       const transformedIngredients = selectedRecipe.ingredients
@@ -17,26 +21,30 @@ function RecipeDetail({ recipe }) {
   
       setIngredientsTransform(transformedIngredients);
     }
+
+
   }, [selectedRecipe, ingredients]);
 
-  // function getIngredients() {
-  //   let ingre = [];
-  //   if(ingredientsTransform.length > 0 && selectedIngredients.length > 0) {
-  //     for (let i = 0; i < ingredientsTransform.length; i++) {
-  //       for (let i=0; i < selectedIngredients.length; i++) {
-  //         if (ingredientsTransform[i].toLowerCase() === selectedIngredients[i]){
-  //           ingre.push(ingredientsTransform[i]);
-  //         }
-  //       }
-  //     }
-  //   }
-  //   return ingre;
-  // }
   function isSelected(ingredient) {
     if(ingredientsTransform.length > 0 && selectedIngredients.length > 0) {
       return selectedIngredients.includes(ingredient) ? true : false
     }
   }
+  function recalculate() {
+    // devuelve un array con los ingredientes seleccionados
+    return ingredientsTransform.filter(ingredient => isSelected(ingredient.toLowerCase())).length;
+  }
+
+    useEffect(() => {
+      if(ingredientsTransform.length > 0 && selectedIngredients.length > 0 && recalculate() > 0) {
+        setPercentage((recalculate() * 100)/ingredientsTransform.length)
+      } else {
+        setPercentage(0);
+      }
+      console.log(percentage);
+    }, [ingredientsTransform, selectedIngredients]);
+
+
 
   return (
     <section className={style.recipeDetail}>
@@ -48,16 +56,17 @@ function RecipeDetail({ recipe }) {
           {
             selectedRecipe.ingredients ? (
               ingredientsTransform.map((ingredient, index) => (
-                  <li key={index} style={{backgroundColor: isSelected(ingredient.toLowerCase()) ? 'green':'red'}} className={style.ingredientItem}>{ingredient}</li>
+                  <li key={index} style={{backgroundColor: isSelected(ingredient.toLowerCase()) ? 'green':'red'}} className={style.ingredientItem}>{ingredient}</li>  
                 ))
               ):(
                 <p className={style.noIngredients}>No Ingredients Selected </p>
               )
             }
             </ul>
-        <div className={style.progressBarContainer} value="20" max="100">
-          <div className={style.progressBar} style={{ width: "60%" }}></div>
-        </div>
+              <div className={style.progressBarContainer} value="20" max="100">
+                <div className={style.progressBar} style={{ width: `${percentage}%` }}></div>
+              </div>
+        
       </div>
     </section>
   );
