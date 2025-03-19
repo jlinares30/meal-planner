@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import style from '../styles/IngredientForm.module.css';
 import { useMeal } from '../context/MealContext';
+import FilterBar from './FilterBar';
 function IngredientForm() {
   const {addIngredient, removeIngredient,selectedIngredients } = useMeal();
+  const [openFilter, setOpenFilter] = useState(false);
+
   const handleOnChange = (e) => {
     // console.log(e.target.value);
     let newIngredients = e.target.value.split(',')
@@ -25,7 +28,12 @@ function IngredientForm() {
     }
   }
 
+  function handleFilter() {
+    setOpenFilter(!openFilter);
+  }
+
   return (
+    <>
     <form className={style.ingredientForm}>
       <h1 className={style.title}>Available Ingredients</h1>
       <label htmlFor='inputIngredient' className={style.lbTitle}>List of Ingredients</label>
@@ -42,9 +50,14 @@ function IngredientForm() {
         ):
       (<p>No Ingredients Selected </p>)}
       </ul>
-      <button type="button" className={style.Btn} >Search</button>
-      <button type="button" className={style.Btn} >Filter</button>
-      <img className={style.mealImg} src='src/assets/pollo a la plancha con ensalada.jpg' alt="meal image" />    </form>
+      {/* <button type="button" className={style.Btn} >Search</button> */}
+      <div className={style.filterBar}>
+        <button type="button" className={style.Btn} onClick={handleFilter} >Filter</button>
+      </div>
+      <img className={style.mealImg} src='src/assets/pollo a la plancha con ensalada.jpg' alt="meal image" />    
+      </form>
+      {openFilter && <FilterBar/>}
+      </>
   );
 }
 

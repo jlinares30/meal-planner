@@ -4,13 +4,11 @@ import { useEffect, useState } from 'react';
 import { use } from 'react';
 
 function RecipeDetail({ recipe }) {
-  const { selectedRecipe, ingredients, selectedIngredients } = useMeal();
+  const { selectedRecipe, ingredients, selectedIngredients, percentage, setPercentage, setAllPercentage } = useMeal();
   const [ingredientsTransform, setIngredientsTransform] = useState([]);
-  const [percentage, setPercentage] = useState(0);
 
-  console.log(selectedIngredients);
-  console.log(ingredientsTransform);
   useEffect(() => {
+    // Transformar los ingredientes de la receta a un array de strings
     if (selectedRecipe.ingredients && selectedRecipe.ingredients.length > 0) {
       const transformedIngredients = selectedRecipe.ingredients
         .map(recipeIngredientId => {
@@ -36,13 +34,16 @@ function RecipeDetail({ recipe }) {
   }
 
     useEffect(() => {
+      setAllPercentage();
       if(ingredientsTransform.length > 0 && selectedIngredients.length > 0 && recalculate() > 0) {
         setPercentage((recalculate() * 100)/ingredientsTransform.length)
       } else {
         setPercentage(0);
       }
-      console.log(percentage);
+      // console.log(percentage);
     }, [ingredientsTransform, selectedIngredients]);
+
+
 
 
 

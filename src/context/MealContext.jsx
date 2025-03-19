@@ -12,7 +12,9 @@ const initialState = {
     ingredients: [],
     recipes: [],
     selectedRecipe: {},
-    isOpenRecipeModal: false
+    isOpenRecipeModal: false,
+    percentage: 0, 
+    allPercentage: []
 }
 const ingredientsReducer = (state, action) => {
 
@@ -60,6 +62,41 @@ const ingredientsReducer = (state, action) => {
                 ...state,
                 isOpenRecipeModal: !state.isOpenRecipeModal
             }
+        case 'CALCULATE_PERCENTAGE':
+            return {
+                ...state,
+                percentage: action.payload
+            }
+        case 'CALCULATE_ALL_PERCENTAGE':
+            state.ingredients //array de ingredientes 
+            state.selectedRecipe //objeto con la receta seleccionada
+            state.selectedIngredients //array con los ingredientes seleccionados
+            state.recipes //array con todas las recetas
+            //buscar los ingredientes seleccionados en todas las recetas para calcular el porcentaje de recetas que se pueden hacer con esos ingredientes
+            //recorrer todas las recetas
+
+            //transformar los ingredientes seleccionados a un array de ids
+            const transformedIngredients = state.selectedIngredients.map(ingredient => {
+                const foundIngredient = state.ingredients.find(ing => ing.name.toLowerCase() === ingredient);
+                return foundIngredient ? foundIngredient.id : null;
+            }).filter(Boolean); 
+
+            // ARRAY DE OBJETOS DE LAS RECETAS CON EL PORCENTAJE DE INGREDIENTES
+            const recipesWithPercentage = state.recipes.map(recipe => {
+                const percentage = recipe.ingredients.filter(ingredient => transformedIngredients.includes(ingredient)).length * 100 / recipe.ingredients.length;
+                return {
+                    ...recipe,
+                    percentage: percentage
+                }
+            }
+            )
+            //alamcenar un array con los porcentajes de las recetas ordenados
+            const sortedRecipes = recipesWithPercentage.sort((a, b) => b.percentage - a.percentage);
+            
+            return {
+                ...state,
+                allPercentage: sortedRecipes
+            }
         default:
             return state;
     }
@@ -88,6 +125,8 @@ export function MealProvider({ children }) {
 
     const values = {
         ingredients: state.ingredients,
+        percentage: state.percentage,
+        setPercentage: (percentage) => dispatch({type: 'CALCULATE_PERCENTAGE', payload: percentage}),
         recipes: state.recipes,
         addIngredient: (ingredients) => dispatch({type: 'ADD_INGREDIENT', payload: ingredients}),
         removeIngredient: (ingredient) => dispatch({type: 'REMOVE_INGREDIENT', payload: ingredient}),
@@ -96,7 +135,9 @@ export function MealProvider({ children }) {
         showRecipeDetails: (recipe) => dispatch({type: 'RECIPE_DETAILS', payload: recipe}),
         ingredientsRecipeDetails: state.ingredientsRecipeDetails,
         isOpenRecipeModal: state.isOpenRecipeModal,
-        openRecipeModal: () => dispatch({type: 'OPEN_RECIPE_MODAL'})
+        openRecipeModal: () => dispatch({type: 'OPEN_RECIPE_MODAL'}),
+        allPercentage: state.allPercentage,
+        setAllPercentage: () => dispatch({type: 'CALCULATE_ALL_PERCENTAGE'})
       }
 
     return(

@@ -1,8 +1,11 @@
+import { useMeal } from '../context/MealContext';
 import style from '../styles/CardList.module.css';
 import Card from './Card';
 import classNames from 'classnames';
 
-function CardList({location, products}) {
+function CardList({location, products }) {
+  const {selectedIngredients, allPercentage} = useMeal()
+
   const recipeListClasses = classNames(
     style.recipeListHomePage,
     {
@@ -12,10 +15,16 @@ function CardList({location, products}) {
   return (
     <>
       <div className={recipeListClasses}>
-        {products.map((product, index) => (
-          <Card key={index} product={product} />
-        ))}
-
+        { (selectedIngredients.length > 0 && location === "home") ? (
+          allPercentage.map((product, index) => (
+            <Card key={index} product={product} />
+          )))
+          : (
+            products.map((product, index) => (
+              <Card key={index} product={product} />
+            ))
+          )
+        }
       </div>
     </>
   );

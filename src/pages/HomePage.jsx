@@ -5,6 +5,7 @@ import RecipeDetail from "../components/RecipeDetail";
 import IngredientForm from "../components/IngredientForm";
 import RecipeDetailsModal from "../components/RecipeDetailsModal";
 import Sidebar from "../components/Sidebar";
+import FilterBar from "../components/FilterBar";
 import style from "../styles/HomePage.module.css";
 import { useMeal } from "../context/MealContext";
 
@@ -14,6 +15,7 @@ function HomePage({ location }) {
     <>
       <Navbar location={location}/>
       <main className={style.homePage}>
+        {/* <FilterBar /> */}
         <Sidebar location={'home'}/>
         <RecipeDetail/>
         <IngredientForm />
