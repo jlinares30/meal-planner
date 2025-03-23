@@ -1,184 +1,236 @@
 [
-    {
-      "id": 1,
-      "name": "Omelette de espinaca y queso",
-      "ingredients": [7, 28, 10],
-      "category": "Desayuno",
-      "instructions": "Bate los huevos con sal y pimienta. En una sartén caliente, cocina las espinacas por un minuto, agrega los huevos y cocina a fuego lento hasta que cuaje. Añade queso y dobla el omelette."
-    },
-    {
-      "id": 2,
-      "name": "Tortilla de atún",
-      "ingredients": [7, 84],
-      "category": "Desayuno",
-      "instructions": "Bate los huevos con sal y pimienta. Añade el atún escurrido y mezcla bien. Cocina en una sartén con un poco de aceite hasta que esté dorada por ambos lados."
-    },
-    {
-      "id": 3,
-      "name": "Ensalada de pollo con palta",
-      "ingredients": [2, 21, 6, 15],
-      "category": "Desayuno",
-      "instructions": "Corta el pollo en cubos y cocínalo. Mezcla con palta en trozos, lechuga picada, sal y jugo de limón."
-    },
-    {
-      "id": 4,
-      "name": "Arroz con pollo",
-      "ingredients": [2, 3, 16, 5, 32],
-      "category": "Almuerzo",
-      "instructions": "Dora el pollo con ajo y cebolla. Agrega arroz, pimiento y agua. Cocina hasta que el arroz esté listo."
-    },
-    {
-      "id": 5,
-      "name": "Tallarines verdes con bistec",
-      "ingredients": [47, 9, 86, 10, 38],
-      "category": "Almuerzo",
-      "instructions": "Cocina los tallarines. Licúa la albahaca con queso y aceite de oliva. Mezcla con la pasta y añade pollo cocido en trozos."
-    },
-    {
-      "id": 6,
-      "name": "Sopa de pollo",
-      "ingredients": [2, 23, 44, 5],
-      "category": "Almuerzo",
-      "instructions": "Hierve el pollo con cebolla. Agrega zanahoria y papa picadas. Cocina hasta que las verduras estén tiernas."
-    },
-    {
-      "id": 7,
-      "name": "Pollo al horno con papas",
-      "ingredients": [2, 44, 32],
-      "category": "Almuerzo",
-      "instructions": "Sazona el pollo con ajo, sal y pimienta. Hornea con papas cortadas en trozos hasta que estén doradas."
-    },
-    {
-      "id": 8,
-      "name": "Lentejitas con pollo",
-      "ingredients": [41, 2, 23, 5, 32],
-      "category": "Almuerzo",
-      "instructions": "Cocina las lentejas con zanahoria, cebolla y ajo. Agrega el pollo en trozos y deja cocinar hasta que esté tierno."
-    },
-    {
-      "id": 9,
-      "name": "Ceviche de pollo",
-      "ingredients": [2, 15, 5, 25],
-      "category": "Almuerzo",
-      "instructions": "Corta el pollo en trozos pequeños y cocínalo. Mezcla con jugo de limón, cebolla en juliana, sal y ají al gusto."
-    },
-    {
-      "id": 10,
-      "name": "Ensalada de lentejas",
-      "ingredients": [41, 1, 5, 15],
-      "category": "Desayuno",
-      "instructions": "Hierve las lentejas y deja enfriar. Mezcla con tomate y cebolla picados. Aliña con jugo de limón y sal."
-    },
-    {
-      "id": 11,
-      "name": "Arroz chaufa de pollo",
-      "ingredients": [3, 2, 7, 85, 22],
-      "category": "Almuerzo",
-      "instructions": "Saltea el pollo en una sartén. Añade arroz cocido, huevo revuelto y sillao. Agrega cebolla china picada."
-    },
-    {
-      "id": 12,
-      "name": "Pollo saltado",
-      "ingredients": [2, 5, 1, 25, 85],
-      "category": "Almuerzo",
-      "instructions": "Saltea el pollo en tiras con cebolla, tomate y ají. Añade sillao y cocina hasta que las verduras estén tiernas."
-    },
-    {
-      "id": 13,
-      "name": "Revuelto de lentejas con huevo",
-      "ingredients": [41, 7, 5, 32],
-      "category": "Desayuno",
-      "instructions": "Cocina las lentejas con cebolla y ajo. Agrega los huevos batidos y revuelve hasta que cuajen."
-    },
-    {
-      "id": 14,
-      "name": "Puré de papas con pollo",
-      "ingredients": [44, 2, 30, 87],
-      "category": "Almuerzo",
-      "instructions": "Hierve las papas y haz un puré con leche y mantequilla. Acompaña con pollo sancochado o frito."
-    },
-    {
-      "id": 15,
-      "name": "Tostada de pollo con palta",
-      "ingredients": [81, 2, 21, 15],
-      "category": "Desayuno",
-      "instructions": "Machaca la palta con sal y limón. Unta en el pan y añade pollo desmenuzado."
-    },
-    {
-      "id": 16,
-      "name": "Seco de pollo",
-      "ingredients": [2, 3, 5, 16, 23],
-      "category": "Almuerzo",
-      "instructions": "Dora el pollo con cebolla y pimiento. Agrega agua y cocina hasta que el pollo esté tierno. Acompaña con arroz."
-    },
-    {
-      "id": 17,
-      "name": "Ensalada de espinaca y queso",
-      "ingredients": [28, 10, 1, 15],
-      "category": "Desayuno",
-      "instructions": "Lava la espinaca y mézclala con queso en cubos y tomate en rodajas. Aliña con limón y sal."
-    },
-    {
-      "id": 18,
-      "name": "Tallarines rojos con pollo",
-      "ingredients": [9, 2, 1, 5, 32],
-      "category": "Almuerzo",
-      "instructions": "Cocina los tallarines. Prepara una salsa con tomate, cebolla y ajo. Mezcla con el pollo en trozos y sirve con la pasta."
-    },
-    {
-      "id": 19,
-      "name": "Pollo a la plancha con ensalada",
-      "ingredients": [2, 6, 1, 15],
-      "category": "Almuerzo",
-      "instructions": "Cocina el pollo a la plancha con sal. Acompaña con una ensalada de lechuga y tomate aliñada con limón."
-    },
-    {
-      "id": 20,
-      "name": "Estofado de pollo con papa",
-      "ingredients": [2, 4, 5, 32],
-      "category": "Almuerzo",
-      "instructions": "Dora el pollo con cebolla y ajo. Agrega papas y agua. Cocina hasta que el pollo y las papas estén tiernas."
-    },
-    {
-      "id": 21,
-      "name": "Pancake de avena con plátano",
-      "ingredients": [48, 54, 7, 30],
-      "category": "Desayuno",
-      "instructions": "Licúa la avena con plátano y huevos. Cocina en un sartén caliente hasta que estén dorados por ambos lados."
-    },
-    {
-      "id": 22,
-      "name": "Pancake de zanahoria",
-      "ingredients": [23, 7, 30],
-      "category": "Desayuno",
-      "instructions": "Ralla la zanahoria y mézclala con los huevos batidos. Cocina en un sartén caliente hasta que estén dorados por ambos lados."
-    },
-    {
-      "id": 23,
-      "name": "Papa a la huancaína",
-      "ingredients": [44, 25, 10, 33, 78, 7, 6],
-      "category": "Almuerzo",
-      "instructions": "cocina las papas y cúbrelas con una salsa de ají amarillo, queso y galleta de soda. Acompaña con huevo y aceitunas."
-    },
-    {
-      "id": 24,
-      "name": "Leche de tigre",
-      "ingredients": [8, 15, 5, 88],
-      "category": "Almuerzo",
-      "instructions": "Corta el pescado en trozos pequeños y cocínalo. Mezcla con jugo de limón, cebolla en juliana, sal y rocoto al gusto."
-    },
-    {
-      "id": 25,
-      "name": "Pisco Sour",
-      "ingredients": [89, 90, 91, 92, 15, 7],
-      "category": "Cocktail",
-      "instructions": "En una coctelera, mezcla el pisco, el jugo de limón, el jarabe de goma y la clara de huevo. Agrega hielo y bate hasta que esté frío. Sirve en un vaso y añade unas gotas de amargo de angostura."
-    },
-    {
-      "id": 26,
-      "name": "Causa de pollo",
-      "ingredients": [2, 44, 5, 15, 25, 21],
-      "category": "Almuerzo",
-      "instructions": "Cocina el pollo con cebolla y ajo. Haz un puré de papas y mezcla con ají amarillo y limón. Arma capas de puré y pollo."
-    } 
-  ]
+  {
+    "id": 1,
+    "name": "Omelette de espinaca y queso",
+    "ingredients": [7, 28, 10],
+    "category": "Breakfast",
+    "instructions": "Bate los huevos con sal y pimienta. En una sartén caliente, cocina las espinacas por un minuto, agrega los huevos y cocina a fuego lento hasta que cuaje. Añade queso y dobla el omelette.",
+    "time": 15,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 2,
+    "name": "Tortilla de atún",
+    "ingredients": [7, 84],
+    "category": "Breakfast",
+    "instructions": "Bate los huevos con sal y pimienta. Añade el atún escurrido y mezcla bien. Cocina en una sartén con un poco de aceite hasta que esté dorada por ambos lados.",
+    "time": 10,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 3,
+    "name": "Ensalada de pollo con palta",
+    "ingredients": [2, 21, 6, 15],
+    "category": "Breakfast",
+    "instructions": "Corta el pollo en cubos y cocínalo. Mezcla con palta en trozos, lechuga picada, sal y jugo de limón.",
+    "time": 20,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 4,
+    "name": "Arroz con pollo",
+    "ingredients": [2, 3, 16, 5, 32],
+    "category": "Lunch",
+    "instructions": "Dora el pollo con ajo y cebolla. Agrega arroz, pimiento y agua. Cocina hasta que el arroz esté listo.",
+    "time": 45,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 5,
+    "name": "Tallarines verdes con bistec",
+    "ingredients": [47, 9, 86, 10, 38],
+    "category": "Lunch",
+    "instructions": "Cocina los tallarines. Licúa la albahaca con queso y aceite de oliva. Mezcla con la pasta y añade pollo cocido en trozos.",
+    "time": 40,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 6,
+    "name": "Sopa de pollo",
+    "ingredients": [2, 23, 44, 5],
+    "category": "Lunch",
+    "instructions": "Hierve el pollo con cebolla. Agrega zanahoria y papa picadas. Cocina hasta que las verduras estén tiernas.",
+    "time": 60,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 7,
+    "name": "Pollo al horno con papas",
+    "ingredients": [2, 44, 32],
+    "category": "Lunch",
+    "instructions": "Sazona el pollo con ajo, sal y pimienta. Hornea con papas cortadas en trozos hasta que estén doradas.",
+    "time": 50,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 8,
+    "name": "Lentejitas con pollo",
+    "ingredients": [41, 2, 23, 5, 32],
+    "category": "Lunch",
+    "instructions": "Cocina las lentejas con zanahoria, cebolla y ajo. Agrega el pollo en trozos y deja cocinar hasta que esté tierno.",
+    "time": 70,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 9,
+    "name": "Ceviche de pollo",
+    "ingredients": [2, 15, 5, 25],
+    "category": "Lunch",
+    "instructions": "Corta el pollo en trozos pequeños y cocínalo. Mezcla con jugo de limón, cebolla en juliana, sal y ají al gusto.",
+    "time": 30,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 10,
+    "name": "Ensalada de lentejas",
+    "ingredients": [41, 1, 5, 15],
+    "category": "Dinner",
+    "instructions": "Hierve las lentejas y deja enfriar. Mezcla con tomate y cebolla picados. Aliña con jugo de limón y sal.",
+    "time": 45,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 11,
+    "name": "Arroz chaufa de pollo",
+    "ingredients": [3, 2, 7, 85, 22],
+    "category": "Lunch",
+    "instructions": "Saltea el pollo en una sartén. Añade arroz cocido, huevo revuelto y sillao. Agrega cebolla china picada.",
+    "time": 35,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 12,
+    "name": "Pollo saltado",
+    "ingredients": [2, 5, 1, 25, 85],
+    "category": "Lunch",
+    "instructions": "Saltea el pollo en tiras con cebolla, tomate y ají. Añade sillao y cocina hasta que las verduras estén tiernas.",
+    "time": 30,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 13,
+    "name": "Revuelto de lentejas con huevo",
+    "ingredients": [41, 7, 5, 32],
+    "category": "Breakfast",
+    "instructions": "Cocina las lentejas con cebolla y ajo. Agrega los huevos batidos y revuelve hasta que cuajen.",
+    "time": 40,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 14,
+    "name": "Puré de papas con pollo",
+    "ingredients": [44, 2, 30, 87],
+    "category": "Lunch",
+    "instructions": "Hierve las papas y haz un puré con leche y mantequilla. Acompaña con pollo sancochado o frito.",
+    "time": 45,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 15,
+    "name": "Tostada de pollo con palta",
+    "ingredients": [81, 2, 21, 15],
+    "category": "Breakfast",
+    "instructions": "Machaca la palta con sal y limón. Unta en el pan y añade pollo desmenuzado.",
+    "time": 15,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 16,
+    "name": "Seco de pollo",
+    "ingredients": [2, 3, 5, 16, 23],
+    "category": "Lunch",
+    "instructions": "Dora el pollo con cebolla y pimiento. Agrega agua y cocina hasta que el pollo esté tierno. Acompaña con arroz.",
+    "time": 60,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 17,
+    "name": "Ensalada de espinaca y queso",
+    "ingredients": [28, 10, 1, 15],
+    "category": "Breakfast",
+    "instructions": "Lava la espinaca y mézclala con queso en cubos y tomate en rodajas. Aliña con limón y sal.",
+    "time": 15,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 18,
+    "name": "Tallarines rojos con pollo",
+    "ingredients": [9, 2, 1, 5, 32],
+    "category": "Lunch",
+    "instructions": "Cocina los tallarines. Prepara una salsa con tomate, cebolla y ajo. Mezcla con el pollo en trozos y sirve con la pasta.",
+    "time": 40,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 19,
+    "name": "Pollo a la plancha con ensalada",
+    "ingredients": [2, 6, 1, 15],
+    "category": "Lunch",
+    "instructions": "Cocina el pollo a la plancha con sal. Acompaña con una ensalada de lechuga y tomate aliñada con limón.",
+    "time": 25,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 20,
+    "name": "Estofado de pollo con papa",
+    "ingredients": [2, 4, 5, 32],
+    "category": "Lunch",
+    "instructions": "Dora el pollo con cebolla y ajo. Agrega papas y agua. Cocina hasta que el pollo y las papas estén tiernas.",
+    "time": 55,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 21,
+    "name": "Pancake de avena con plátano",
+    "ingredients": [48, 54, 7, 30],
+    "category": "Breakfast",
+    "instructions": "Licúa la avena con plátano y huevos. Cocina en un sartén caliente hasta que estén dorados por ambos lados.",
+    "time": 20,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 22,
+    "name": "Pancake de zanahoria",
+    "ingredients": [23, 7, 30],
+    "category": "Breakfast",
+    "instructions": "Ralla la zanahoria y mézclala con los huevos batidos. Cocina en un sartén caliente hasta que estén dorados por ambos lados.",
+    "time": 20,
+    "difficulty": "Fácil"
+  },
+  {
+    "id": 23,
+    "name": "Papa a la huancaína",
+    "ingredients": [44, 25, 10, 33, 78, 7, 6],
+    "category": "Lunch",
+    "instructions": "cocina las papas y cúbrelas con una salsa de ají amarillo, queso y galleta de soda. Acompaña con huevo y aceitunas.",
+    "time": 40,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 24,
+    "name": "Leche de tigre",
+    "ingredients": [8, 15, 5, 88],
+    "category": "Lunch",
+    "instructions": "Corta el pescado en trozos pequeños y cocínalo. Mezcla con jugo de limón, cebolla en juliana, sal y rocoto al gusto.",
+    "time": 25,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 25,
+    "name": "Pisco Sour",
+    "ingredients": [89, 90, 91, 92, 15, 7],
+    "category": "Cocktail",
+    "instructions": "En una coctelera, mezcla el pisco, el jugo de limón, el jarabe de goma y la clara de huevo. Agrega hielo y bate hasta que esté frío. Sirve en un vaso y añade unas gotas de amargo de angostura.",
+    "time": 10,
+    "difficulty": "Medio"
+  },
+  {
+    "id": 26,
+    "name": "Causa de pollo",
+    "ingredients": [2, 44, 5, 15, 25, 21],
+    "category": "Lunch",
+    "instructions": "Cocina el pollo con cebolla y ajo. Haz un puré de papas y mezcla con ají amarillo y limón. Arma capas de puré y pollo.",
+    "time": 50,
+    "difficulty": "Difícil"
+  } 
+]

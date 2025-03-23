@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { use } from 'react';
 
 function RecipeDetail({ recipe }) {
-  const { selectedRecipe, ingredients, selectedIngredients, percentage, setPercentage, setAllPercentage } = useMeal();
+  const { selectedRecipe, ingredients, selectedIngredients, percentage, setPercentage, setAllPercentage, allPercentage } = useMeal();
   const [ingredientsTransform, setIngredientsTransform] = useState([]);
 
   useEffect(() => {

@@ -53,10 +53,10 @@ function IngredientForm() {
       {/* <button type="button" className={style.Btn} >Search</button> */}
       <div className={style.filterBar}>
         <button type="button" className={style.Btn} onClick={handleFilter} >Filter</button>
+      {openFilter && <FilterBar/>}
       </div>
       <img className={style.mealImg} src='src/assets/pollo a la plancha con ensalada.jpg' alt="meal image" />    
       </form>
-      {openFilter && <FilterBar/>}
       </>
   );
 }

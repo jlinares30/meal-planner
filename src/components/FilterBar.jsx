@@ -1,32 +1,58 @@
 import style from '../styles/FilterBar.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useMeal } from '../context/MealContext';
 
-function FilterBar({ onFilterChange }) {
-  const [mealType, setMealType] = useState('');
-  const [difficulty, setDifficulty] = useState('');
-  const [time, setTime] = useState('');
+function FilterBar() {
+  const { filters, recipes, filterRecipes } = useMeal();
+  const [localFilters, setLocalFilters] = useState({
+    category: [],
+    difficulty: [],
+    time: []
+  });
+  const caregories = ["breakfast", "lunch", "dinner"]
 
-  const handleFilterChange = () => {
-    onFilterChange({ mealType, difficulty, time });
+  const handleFilterChange = (e) => {
+    const { name, value, checked } = e.target;
+
+    setLocalFilters((prev) => {
+      if(checked){
+        // si el valor no esta en el array, lo agrega 
+        return{
+          ...prev,
+          [name]: [...prev[name], value]
+        }
+      } else {
+        // si el valor esta en el array, lo elimina
+      return {
+        ...prev,
+        [name]: prev[name].filter((item) => item !== value)
+      }
+      }
+    });
   };
+
+  useEffect(() => {
+    filterRecipes(localFilters);
+  }, [localFilters]);
 
   return (
     <div className={style.filterBar}>
       <div className={style.filterGroup}>
         <label htmlFor="category">Category</label>
         <div className={style.checkboxGroup}>
-          <div className={style.optionGroup}>
-            <input className={style.inputCheckbox} id='breakfast' type="checkbox" />
-            <label htmlFor="breakfast">Breakfast</label>
-          </div>
-          <div className={style.optionGroup}>
-            <input id='lunch' type="checkbox" />
-            <label htmlFor="lunch">Lunch</label>
-          </div>
-          <div className={style.optionGroup}>
-            <input id='dinner' type="checkbox" />
-            <label htmlFor="dinner">Dinner</label>
-          </div>
+          {caregories.map((category) => (
+              <div key={category} className={style.optionGroup}>
+                <input
+                  type="checkbox"
+                  id={category}
+                  name="category"
+                  value={category}
+                  checked={localFilters.category.includes(category)}
+                  onChange={handleFilterChange}
+                />
+                <label htmlFor={category}>{category.charAt(0).toUpperCase() + category.slice(1)}</label>
+              </div>
+            ))}
         </div>
       </div>
       <div className={style.filterGroup}>
@@ -63,7 +89,6 @@ function FilterBar({ onFilterChange }) {
           </div>
         </div>
       </div>
-      <button className={style.filterButton} onClick={handleFilterChange}>Apply Filters</button>
     </div>
   );
 }
