@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import style from '../styles/Navbar.module.css';
+import SearchBar from "./SearchBar";
 function Navbar({ location }) {
   return (
     <nav className={style.navbarContainer}>
@@ -20,10 +21,7 @@ function Navbar({ location }) {
             </li>
           </ul>
         ):(
-          <div className={style.searchContainer}>
-            <input type="text" placeholder="Search" className={style.searchInput} />
-            <img src="src/assets/search.svg" alt="search" className={style.searchIcon} />
-          </div>
+          <SearchBar location={location}/>
         ) }
          <div >
             <img className={style.avatar} src="src/assets/profile.jpg" alt="avatar" />

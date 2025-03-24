@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 .recipeCard{
-    @apply relative w-34 bg-[var(--green-middle)] rounded-lg shadow-2xl overflow-hidden cursor-pointer;
+    @apply relative w-34 h-70 bg-[var(--green-middle)] rounded-lg shadow-2xl overflow-hidden cursor-pointer;
 }
 .imgCard{
     @apply w-full h-32 object-cover;

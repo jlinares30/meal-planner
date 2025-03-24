@@ -15,6 +15,7 @@ const initialState = {
     percentage: 0, 
     allPercentageOrdered: [],
     recipesFiltered: [],
+    productSearched: '',
     filters:{
         category: [],
         difficulty: [],
@@ -145,7 +146,11 @@ const ingredientsReducer = (state, action) => {
                 recipesFiltered : sortedRecipes2,
                 filters: action.payload
             };
-
+        case 'SET_PRODUCT_SEARCHED':
+            return {
+                ...state,
+                productSearched: action.payload
+            }
 
         default:
             return state;
@@ -197,7 +202,10 @@ export function MealProvider({ children }) {
                 time: filters.time || state.filters.time
               };
               dispatch({ type: 'FILTER_RECIPES', payload: updatedFilters });
-        }
+        },
+        productSearched: state.productSearched,
+        setProductSearched: (product) => dispatch({type: 'SET_PRODUCT_SEARCHED', payload: product})
+
       }
 
     return(

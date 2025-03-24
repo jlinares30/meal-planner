@@ -9,15 +9,6 @@
 .navbarList {
   @apply flex space-x-6 justify-center items-center h-full;
 }
-.searchContainer{
-    @apply flex justify-center items-center;
-}
-.searchInput{
-    @apply h-8 rounded-2xl bg-[var(--green-light)] text-lg pl-4 mr-1;
-}
-.searchIcon{
-    @apply w-8 h-8 cursor-pointer;
-}
 .navbarListItem {
   @apply cursor-pointer hover:text-amber-50;
 }

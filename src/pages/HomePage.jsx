@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar";
-import Recomendation from "../components/Recomendation";
 import CardList from "../components/CardList";
 import RecipeDetail from "../components/RecipeDetail";
 import IngredientForm from "../components/IngredientForm";

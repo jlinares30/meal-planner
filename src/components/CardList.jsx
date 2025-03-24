@@ -5,14 +5,8 @@ import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 
 function CardList({location, products }) {
-  const {selectedIngredients, allPercentageOrdered, filters, recipesFiltered, recipes} = useMeal()
+  const {selectedIngredients, allPercentageOrdered, productSearched, recipesFiltered, recipes} = useMeal()
   const [recipesToRender, setRecipesToRender] = useState([]);
-  // const recipesToRender = recipesFiltered.length > 0 ? recipesFiltered : allPercentageOrdered.length > 0 ? allPercentageOrdered : recipes;
-  // useEffect(() => {
-  //   console.log("recipesToRender ha cambiado:", recipesToRender);
-  //   console.log("recipesFiltered ha cambiado:", recipesFiltered);
-  //   console.log("allPercentageOrdered ha cambiado:", allPercentageOrdered);
-  // }, [recipesToRender, recipesFiltered,allPercentageOrdered]);
 
   useEffect(() => {
     setRecipesToRender(recipesFiltered)
@@ -39,7 +33,7 @@ function CardList({location, products }) {
             <Card key={index} product={product} />
           )))
           : (
-            products.map((product, index) => (
+            (productSearched.length > 0 ? productSearched : products).map((product, index) => (
               <Card key={index} product={product} />
             ))
           )
