@@ -4,10 +4,14 @@ import { useEffect, useState } from 'react';
 import { use } from 'react';
 
 function RecipeDetail({ recipe }) {
-  const { selectedRecipe, ingredients, selectedIngredients, percentage, setPercentage, setAllPercentage, allPercentage } = useMeal();
+  const { selectedRecipe, ingredients, selectedIngredients, percentage, setPercentage, setAllPercentage, setShoppingList, removeShoppingList } = useMeal();
   const [ingredientsTransform, setIngredientsTransform] = useState([]);
+  const [openOptionIngredient, setOpenOptionIngredient] = useState(null);
 
   useEffect(() => {
+    setOpenOptionIngredient(null); // Cerrar la ventana de opciones al cambiar de receta
+
+
     // Transformar los ingredientes de la receta a un array de strings
     if (selectedRecipe.ingredients && selectedRecipe.ingredients.length > 0) {
       const transformedIngredients = selectedRecipe.ingredients
@@ -43,9 +47,22 @@ function RecipeDetail({ recipe }) {
       // console.log(percentage);
     }, [ingredientsTransform, selectedIngredients]);
 
+  function setOption (ingredient) {
+    setOpenOptionIngredient(openOptionIngredient === ingredient ? null : ingredient);
+  }
 
-
-
+  const handleIngredientClick = (ingredient) => {
+    setOption(ingredient);
+    console.log('click');
+  }
+  const handleClickAddShopping = (ingredient) => {
+    setOption(ingredient);
+    setShoppingList(ingredient);
+  }
+  const handleClickRemoveShopping = (ingredient) => {
+    setOption(ingredient);
+    removeShoppingList(ingredient);
+  }
 
   return (
     <section className={style.recipeDetail}>
@@ -57,16 +74,22 @@ function RecipeDetail({ recipe }) {
           {
             selectedRecipe.ingredients ? (
               ingredientsTransform.map((ingredient, index) => (
-                  <li key={index} style={{backgroundColor: isSelected(ingredient.toLowerCase()) ? 'green':'red'}} className={style.ingredientItem}>{ingredient}</li>  
+                  <div className={style.ingredientItemContainer} style={{justifySelf: ingredient === openOptionIngredient ? 'start':'center'}}>
+                    <li key={index} onClick={() => handleIngredientClick(ingredient)} style={{backgroundColor: isSelected(ingredient.toLowerCase()) ? 'green':'red'}} className={style.ingredientItem}>{ingredient}</li>
+                    {openOptionIngredient === ingredient && <ul className={style.optionsWindow}>
+                      <li className={style.optionItem} onClick={() => handleClickAddShopping(ingredient)}>Add Shopping List</li>
+                      <li className={style.optionItem} onClick={() => handleClickRemoveShopping(ingredient)}>Remove Shopping List</li>
+                      </ul>}
+                  </div>  
                 ))
               ):(
-                <p className={style.noIngredients}>No Ingredients Selected </p>
+                <p className={style.noIngredients}>Select a Recipe</p>
               )
             }
-            </ul>
-              <div className={style.progressBarContainer} value="20" max="100">
-                <div className={style.progressBar} style={{ width: `${percentage}%` }}></div>
-              </div>
+        </ul>
+        <div className={style.progressBarContainer} value="20" max="100">
+          <div className={style.progressBar} style={{ width: `${percentage}%` }}></div>
+        </div>
         
       </div>
     </section>

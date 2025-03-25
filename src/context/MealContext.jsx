@@ -16,6 +16,7 @@ const initialState = {
     allPercentageOrdered: [],
     recipesFiltered: [],
     productSearched: '',
+    shoppingList: [],
     filters:{
         category: [],
         difficulty: [],
@@ -151,7 +152,19 @@ const ingredientsReducer = (state, action) => {
                 ...state,
                 productSearched: action.payload
             }
-
+        case 'SET_SHOPPING_LIST':
+            if(state.shoppingList.includes(action.payload)) {
+                return state;
+            }
+            return {
+                ...state,
+                shoppingList: [...state.shoppingList, action.payload]
+            }
+        case 'REMOVE_SHOPPING_LIST':
+            return {
+                ...state,
+                shoppingList: state.shoppingList.filter(item => item !== action.payload)
+            }
         default:
             return state;
     }
@@ -204,8 +217,10 @@ export function MealProvider({ children }) {
               dispatch({ type: 'FILTER_RECIPES', payload: updatedFilters });
         },
         productSearched: state.productSearched,
-        setProductSearched: (product) => dispatch({type: 'SET_PRODUCT_SEARCHED', payload: product})
-
+        setProductSearched: (product) => dispatch({type: 'SET_PRODUCT_SEARCHED', payload: product}),
+        shoppingList: state.shoppingList,
+        setShoppingList: (item) => dispatch({type: 'SET_SHOPPING_LIST', payload: item}),
+        removeShoppingList: (item) => dispatch({type: 'REMOVE_SHOPPING_LIST', payload: item})
       }
 
     return(

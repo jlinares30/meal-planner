@@ -1,8 +1,11 @@
 import style from '../styles/Sidebar.module.css';
 import classNames from 'classnames';
 import { Link } from "react-router-dom";
+import { useMeal } from '../context/MealContext';
+import { useEffect } from 'react';
 
 function Sidebar({ location }) {
+  const { shoppingList, setShoppingList } = useMeal();
   const sidebarClasses = classNames(
     style.sidebarHomePage,
     {
@@ -15,6 +18,12 @@ function Sidebar({ location }) {
       [style.navItem]: location !== "home",
     }
   );
+
+  useEffect(() => {
+    console.log(shoppingList);
+  }
+  , [shoppingList]);
+
   return (
     <aside className={sidebarClasses}>
       <Link to={"/"}>
