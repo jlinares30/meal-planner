@@ -19,6 +19,13 @@ function Sidebar({ location }) {
     }
   );
 
+  //drag and drop
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const data = e.dataTransfer.getData("text");
+    setShoppingList((prev) => [...prev, data]);
+  }
+
   useEffect(() => {
     console.log(shoppingList);
   }
@@ -44,7 +51,7 @@ function Sidebar({ location }) {
           </li>
           </Link>
           <Link>
-          <li className={navItemClasses}>
+          <li className={navItemClasses} draggable onDrop={handleDrop} >
             <img src="src/assets/list-check.svg" alt="list check icon" />
             <p>Shopping List</p>
           </li>

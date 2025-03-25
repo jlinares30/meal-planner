@@ -12,7 +12,7 @@ function IngredientsPage({ location }) {
       <Navbar location={location}/>
       <main className={style.ingredientsPage}>
         <Sidebar location={'page'}/>
-        <ShoppingListSidebar />
+        <ShoppingListSidebar location={location} />
         <CardList location={'page'} products={ingredients}/>
       </main>
     </>

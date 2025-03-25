@@ -1,15 +1,15 @@
 import style from '../styles/RecipeDetail.module.css';
 import { useMeal } from '../context/MealContext';
 import { useEffect, useState } from 'react';
-import { use } from 'react';
+import { useDrag } from 'react-dnd';
 
-function RecipeDetail({ recipe }) {
+function RecipeDetail() {
   const { selectedRecipe, ingredients, selectedIngredients, percentage, setPercentage, setAllPercentage, setShoppingList, removeShoppingList } = useMeal();
   const [ingredientsTransform, setIngredientsTransform] = useState([]);
-  const [openOptionIngredient, setOpenOptionIngredient] = useState(null);
+  const [openIngredient, setOpenIngredient] = useState(null);
 
   useEffect(() => {
-    setOpenOptionIngredient(null); // Cerrar la ventana de opciones al cambiar de receta
+    setOpenIngredient(null); // Cerrar la ventana de opciones al cambiar de receta
 
 
     // Transformar los ingredientes de la receta a un array de strings
@@ -24,7 +24,7 @@ function RecipeDetail({ recipe }) {
       setIngredientsTransform(transformedIngredients);
     }
 
-
+    console.log(selectedRecipe)
   }, [selectedRecipe, ingredients]);
 
   function isSelected(ingredient) {
@@ -48,7 +48,7 @@ function RecipeDetail({ recipe }) {
     }, [ingredientsTransform, selectedIngredients]);
 
   function setOption (ingredient) {
-    setOpenOptionIngredient(openOptionIngredient === ingredient ? null : ingredient);
+    setOpenIngredient(openIngredient === ingredient ? null : ingredient);
   }
 
   const handleIngredientClick = (ingredient) => {
@@ -64,6 +64,23 @@ function RecipeDetail({ recipe }) {
     removeShoppingList(ingredient);
   }
 
+  //Drag and Drop
+
+  // const [{ isDragging }, drag] = useDrag(() => ({
+  //   type: "ITEM",
+  //   item,
+  //   collect: (monitor) => ({
+  //     isDragging: !!monitor.isDragging(),
+  //   }),
+  // }));
+
+  // const handleDragStart = (e, item) => {
+  //   e.dataTransfer.setData('text/plain', item);
+  // }
+  // const handleDragOver = (e) => {
+  //   e.preventDefault();
+  // }
+
   return (
     <section className={style.recipeDetail}>
       <img className={style.recipeImg} src={`src/assets/${selectedRecipe.name || 'ensalada de espinaca y queso'}.jpg`} alt="recipe image" />
@@ -74,11 +91,22 @@ function RecipeDetail({ recipe }) {
           {
             selectedRecipe.ingredients ? (
               ingredientsTransform.map((ingredient, index) => (
-                  <div className={style.ingredientItemContainer} style={{justifySelf: ingredient === openOptionIngredient ? 'start':'center'}}>
-                    <li key={index} onClick={() => handleIngredientClick(ingredient)} style={{backgroundColor: isSelected(ingredient.toLowerCase()) ? 'green':'red'}} className={style.ingredientItem}>{ingredient}</li>
-                    {openOptionIngredient === ingredient && <ul className={style.optionsWindow}>
-                      <li className={style.optionItem} onClick={() => handleClickAddShopping(ingredient)}>Add Shopping List</li>
-                      <li className={style.optionItem} onClick={() => handleClickRemoveShopping(ingredient)}>Remove Shopping List</li>
+                  <div className={style.ingredientItemContainer}  style={{justifySelf: ingredient === openIngredient ? 'start':'center'}}>
+                    <li 
+                    key={index} 
+                    onClick={() => handleIngredientClick(ingredient)} 
+                    style={{backgroundColor: isSelected(ingredient.toLowerCase()) ? 'green':'red'}} 
+                    className={style.ingredientItem} 
+                    draggable
+                    // ref={drag}
+                    >{ingredient}</li>
+                    {openIngredient === ingredient && <ul className={style.optionsWindow}>
+                      <li 
+                      className={style.optionItem} 
+                      onClick={() => handleClickAddShopping(ingredient)}>Add Shopping List</li>
+                      <li 
+                      className={style.optionItem} 
+                      onClick={() => handleClickRemoveShopping(ingredient)}>Remove Shopping List</li>
                       </ul>}
                   </div>  
                 ))

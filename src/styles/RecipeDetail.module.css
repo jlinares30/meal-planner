@@ -22,16 +22,16 @@
     scrollbar-color: #ccc transparent;
 }
 .ingredientItemContainer{
-    @apply relative justify-self-center animate-pulse transition-all duration-500;
+    @apply relative animate-pulse transition-all duration-500;
 }
 .ingredientItem{
-    @apply text-sm w-38 h-7 flex justify-center items-center rounded-3xl p-0.5 m-1 cursor-pointer;
+    @apply text-sm translate-3 w-38 h-7 flex justify-center items-center rounded-3xl p-0.5 m-1 cursor-pointer;
 }
 .optionsWindow{
     @apply absolute top-1 left-30 z-2 bg-amber-500 text-sm w-40 cursor-pointer animate-pulse transition-all duration-300 rounded-xs overflow-hidden;
 }
 .optionItem{
-    @apply w-full h-full flex border-t-1 border-t-black items-center p-1 hover:bg-amber-400;
+    @apply w-full h-full flex border-t-1 border-t-black items-center p-1 hover:bg-amber-400 animate-pulse transition-all duration-300;
 }
 .noIngredients{
     @apply text-center;

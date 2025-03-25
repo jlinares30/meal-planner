@@ -153,6 +153,12 @@ const ingredientsReducer = (state, action) => {
                 productSearched: action.payload
             }
         case 'SET_SHOPPING_LIST':
+            if(action.payload.length === 0) {
+                return {
+                    ...state,
+                    shoppingList: action.payload
+                }
+            }
             if(state.shoppingList.includes(action.payload)) {
                 return state;
             }

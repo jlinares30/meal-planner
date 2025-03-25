@@ -7,7 +7,7 @@ function SearchBar({location}) {
     const handleOnChange = (e) => {
         const products = location === 'recipe-page' ? recipes : ingredients;
         const productsToShow = products.filter(product => product.name.toLowerCase().includes(e.target.value.toLowerCase()));
-        // console.log(productsToShow);
+        console.log(productsToShow);
         setProductSearched(productsToShow);
     }
 
