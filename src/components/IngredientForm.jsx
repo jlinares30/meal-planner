@@ -41,8 +41,8 @@ function IngredientForm() {
       <h2 className={style.selectedTitle}>Ingredients Selected</h2>
       <ul className={style.ingredientList}>
         {selectedIngredients.length !== 0 ? (  
-            selectedIngredients.map((ingredient, index) => (
-              <li key={index} className={style.ingredientSelected}>
+            selectedIngredients.map((ingredient) => (
+              <li key={ingredient.id} className={style.ingredientSelected}>
                 <p>{ingredient}</p>
                 <img className={style.deleteBtn} onClick={handleOnClick(ingredient)} src="src/assets/x.png" alt="delete button" />
               </li>

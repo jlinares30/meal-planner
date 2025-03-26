@@ -70,7 +70,6 @@
   { "id": 69, "name": "Lucuma en Polvo", "category": "Carbohidrato", "quantity": "200g" },
   { "id": 70, "name": "7 Semillas", "category": "Semilla", "quantity": "200g" },
   { "id": 71, "name": "Té Verde", "category": "Filtro/Bebida", "quantity": "200g" },
-  { "id": 71, "name": "Coco Rallado", "category": "Grasa Saludable", "quantity": "200g" },
   { "id": 72, "name": "Manzanilla", "category": "Filtro/Bebida", "quantity": "200g" },
   { "id": 73, "name": "Miel", "category": "Carbohidrato", "quantity": "200g" },
   { "id": 74, "name": "Ajonjolí", "category": "Grasa Saludable", "quantity": "200g" },
@@ -91,5 +90,6 @@
   { "id": 89, "name": "Pisco", "category": "Fruta", "quantity": "200g" },
   { "id": 90, "name": "Jarabe de Goma", "category": "Fruta", "quantity": "200g" },
   { "id": 91, "name": "Amargo de Angostura", "category": "Fruta", "quantity": "200g" },
-  { "id": 92, "name": "Hielo", "category": "Fruta", "quantity": "200g" }
+  { "id": 92, "name": "Hielo", "category": "Fruta", "quantity": "200g" },
+  { "id": 93, "name": "Coco Rallado", "category": "Grasa Saludable", "quantity": "200g" }
 ]

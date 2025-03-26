@@ -2,15 +2,29 @@ import style from '../styles/RecipeDetail.module.css';
 import { useMeal } from '../context/MealContext';
 import { useEffect, useState } from 'react';
 import { useDrag } from 'react-dnd';
+import { useLocation } from 'react-router-dom';
 
 function RecipeDetail() {
-  const { selectedRecipe, ingredients, selectedIngredients, percentage, setPercentage, setAllPercentage, setShoppingList, removeShoppingList } = useMeal();
+  const { selectedRecipe,
+          showRecipeDetails, 
+          ingredients, 
+          selectedIngredients, 
+          percentage, 
+          setPercentage, 
+          setAllPercentage, 
+          setShoppingList, 
+          removeShoppingList } = useMeal();
   const [ingredientsTransform, setIngredientsTransform] = useState([]);
   const [openIngredient, setOpenIngredient] = useState(null);
+  const pathlocation = useLocation();
+
+  useEffect(() => {
+    // restablecer el ingrediente seleccionado al cambiar de pagina
+    showRecipeDetails({});
+  }, [pathlocation.pathname]);
 
   useEffect(() => {
     setOpenIngredient(null); // Cerrar la ventana de opciones al cambiar de receta
-
 
     // Transformar los ingredientes de la receta a un array de strings
     if (selectedRecipe.ingredients && selectedRecipe.ingredients.length > 0) {
@@ -90,10 +104,10 @@ function RecipeDetail() {
         <ul className={style.ingredientList} >
           {
             selectedRecipe.ingredients ? (
-              ingredientsTransform.map((ingredient, index) => (
+              ingredientsTransform.map((ingredient) => (
                   <div className={style.ingredientItemContainer}  style={{justifySelf: ingredient === openIngredient ? 'start':'center'}}>
                     <li 
-                    key={index} 
+                    key={ingredient.id} 
                     onClick={() => handleIngredientClick(ingredient)} 
                     style={{backgroundColor: isSelected(ingredient.toLowerCase()) ? 'green':'red'}} 
                     className={style.ingredientItem} 

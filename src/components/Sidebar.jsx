@@ -20,11 +20,11 @@ function Sidebar({ location }) {
   );
 
   //drag and drop
-  const handleDrop = (e) => {
-    e.preventDefault();
-    const data = e.dataTransfer.getData("text");
-    setShoppingList((prev) => [...prev, data]);
-  }
+  // const handleDrop = (e) => {
+  //   e.preventDefault();
+  //   const data = e.dataTransfer.getData("text");
+  //   setShoppingList((prev) => [...prev, data]);
+  // }
 
   useEffect(() => {
     console.log(shoppingList);
@@ -51,13 +51,15 @@ function Sidebar({ location }) {
           </li>
           </Link>
           <Link>
-          <li className={navItemClasses} draggable onDrop={handleDrop} >
+          <li className={navItemClasses} 
+          // onDrop={handleDrop} 
+          >
             <img src="src/assets/list-check.svg" alt="list check icon" />
             <p>Shopping List</p>
           </li>
           </Link>
           <Link >
-          <li className={navItemClasses}>
+          <li disabled className={navItemClasses}>
             <img src="src/assets/calendar-week.svg" alt="calendar week icon" />
             <p>Planner</p>
           </li>

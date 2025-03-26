@@ -29,12 +29,12 @@ function CardList({location, products }) {
     <>
       <div className={recipeListClasses}>
         { (recipesToRender.length > 0 && location === "home") ? (
-          recipesToRender.map((product, index) => (
-            <Card key={index} product={product} />
+          recipesToRender.map((product) => (
+            <Card key={product.id} product={product} />
           )))
           : (
-            (productSearched.length > 0 ? productSearched : products).map((product, index) => (
-              <Card key={index} product={product} />
+            (productSearched.length > 0 ? productSearched : products).map((product) => (
+              <Card key={product.id} product={product} />
             ))
           )
         }

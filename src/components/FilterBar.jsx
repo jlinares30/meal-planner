@@ -40,8 +40,8 @@ function FilterBar() {
       <div className={style.filterGroup}>
         <label htmlFor="category">Category</label>
         <div className={style.checkboxGroup}>
-          {caregories.map((category) => (
-              <div key={category} className={style.optionGroup}>
+          {caregories.map((category, index) => (
+              <div key={index} className={style.optionGroup}>
                 <input
                   type="checkbox"
                   id={category}
