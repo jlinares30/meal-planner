@@ -5,8 +5,10 @@ import FilterBar from './FilterBar';
 function IngredientForm() {
   const {addIngredient, removeIngredient,selectedIngredients } = useMeal();
   const [openFilter, setOpenFilter] = useState(false);
+  const [inputValue, setInputValue] = useState('');
 
   const handleOnChange = (e) => {
+    setInputValue(e.target.value);
     // console.log(e.target.value);
     let newIngredients = e.target.value.split(',')
       .map((item) => item.trim().toLowerCase()); // ['tomato', 'avocado']
@@ -37,7 +39,13 @@ function IngredientForm() {
     <form className={style.ingredientForm}>
       <h1 className={style.title}>Available Ingredients</h1>
       <label htmlFor='inputIngredient' className={style.lbTitle}>List of Ingredients</label>
-      <input id='inputIngredient' className={style.inputIngredient} placeholder='Example: tomato, avocado' type="text" onChange={handleOnChange}/>
+      <input id='inputIngredient' 
+            className={style.inputIngredient} 
+            placeholder='Example: tomato, avocado' 
+            type="text" 
+            onChange={handleOnChange}
+            value={inputValue}
+            />
       <h2 className={style.selectedTitle}>Ingredients Selected</h2>
       <ul className={style.ingredientList}>
         {selectedIngredients.length !== 0 ? (  

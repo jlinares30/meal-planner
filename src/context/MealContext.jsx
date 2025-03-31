@@ -153,19 +153,32 @@ const ingredientsReducer = (state, action) => {
                 productSearched: action.payload
             }
         case 'SET_SHOPPING_LIST':
+            console.log('Previous shoppingList:', state.shoppingList);
+            console.log('Payload:', action.payload);
             if(action.payload.length === 0) {
                 return {
                     ...state,
                     shoppingList: action.payload
                 }
             }
-            if(state.shoppingList.includes(action.payload)) {
-                return state;
-            }
+            // Si el payload es un solo objeto, se convierte a un array
+            const newItems = Array.isArray(action.payload) ? action.payload : [action.payload];
+
+            // // se combina el estado actual con los nuevos elementos, evitando duplicados
+            const updatedShoppingList = [
+                // Filtrar los elementos existentes antes de agregar los nuevos
+                // Esto asegura que no haya duplicados en la lista de compras
+                ...state.shoppingList.filter(
+                    (existingItem) => !newItems.some((newItem) => newItem.id === existingItem.id)
+                ),
+                ...newItems,
+            ];
+            console.log('Updated shoppingList:', updatedShoppingList);
+
             return {
                 ...state,
-                shoppingList: [...state.shoppingList, action.payload]
-            }
+                shoppingList: updatedShoppingList
+            };
         case 'REMOVE_SHOPPING_LIST':
             return {
                 ...state,

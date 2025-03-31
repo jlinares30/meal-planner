@@ -26,10 +26,7 @@ function Sidebar({ location }) {
   //   setShoppingList((prev) => [...prev, data]);
   // }
 
-  useEffect(() => {
-    console.log(shoppingList);
-  }
-  , [shoppingList]);
+
 
   return (
     <aside className={sidebarClasses}>
