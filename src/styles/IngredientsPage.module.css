@@ -1,5 +1,5 @@
 @import 'tailwindcss';
 
 .ingredientsPage {
-  @apply bg-[var(--green-middle)] shadow-md rounded-lg max-w-screen-2xl h-screen justify-self-center m-6 grid grid-cols-8 grid-rows-10 gap-3;
+  @apply shadow-md rounded-lg max-w-screen-2xl h-screen justify-self-center m-6 grid grid-cols-8 grid-rows-10 gap-3;
 }
